@@ -6,8 +6,9 @@ const TransactionForm = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input type='text' placeholder='Add Transaction'></input>
+    <form onSubmit={handleSubmit} className='form-container'>
+      <input type='text' placeholder='Add Title'></input>
+      <input type='number' placeholder='Enter Amount'></input>
       <button type='submit'>Submit</button>
     </form>
   )
