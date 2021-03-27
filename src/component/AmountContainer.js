@@ -2,14 +2,16 @@ import React from 'react'
 
 const AmountContainer = () => {
   return (
-    <>
-      <div>
+    <div className='amount-container'>
+      <div className='box'>
         <p>Income</p>
+        <span>Rs 1000</span>
       </div>
-      <div>
+      <div className='box'>
         <p>Expense</p>
+        <span>Rs 1000</span>
       </div>
-    </>
+    </div>
   )
 }
 

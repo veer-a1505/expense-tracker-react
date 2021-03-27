@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Header = () => {
-  return <div>Expense Tracker</div>
+  return <div className='header'>Expense Tracker</div>
 }
 
 export default Header

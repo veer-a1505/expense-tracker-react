@@ -1,12 +1,12 @@
 import React from 'react'
-import Header from './components/Header'
-import AmountContainer from './components/AmountContainer'
-import TransactionList from './components/TransactionList'
-import TransactionForm from './components/TransactionForm'
+import Header from './component/Header'
+import AmountContainer from './component/AmountContainer'
+import TransactionList from './component/TransactionList'
+import TransactionForm from './component/TransactionForm'
 
 function App() {
   return (
-    <div>
+    <div className='container'>
       <Header />
       <AmountContainer />
       <TransactionList />
