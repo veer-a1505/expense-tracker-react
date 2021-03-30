@@ -1,16 +1,12 @@
 import React from 'react'
+import Income from './Income'
+import Expense from './Expense'
 
 const AmountContainer = () => {
   return (
     <div className='amount-container'>
-      <div className='box'>
-        <p>Income</p>
-        <span>Rs 1000</span>
-      </div>
-      <div className='box'>
-        <p>Expense</p>
-        <span>Rs 1000</span>
-      </div>
+      <Income />
+      <Expense />
     </div>
   )
 }

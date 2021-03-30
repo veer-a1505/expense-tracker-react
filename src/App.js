@@ -1,8 +1,8 @@
 import React from 'react'
 import Header from './component/Header'
-import AmountContainer from './component/AmountContainer'
 import TransactionList from './component/TransactionList'
 import TransactionForm from './component/TransactionForm'
+import AmountContainer from './component/AmountContainer'
 
 function App() {
   return (
