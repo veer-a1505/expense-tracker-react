@@ -1,9 +1,16 @@
-import React, { createContext } from 'react'
+import React, { createContext, useState } from 'react'
 
-const ExpenseContext = createContext()
+export const ExpenseContext = createContext()
 
 const ExpenseProvider = (props) => {
-  return <ExpenseContext.Provider>{props.children}</ExpenseContext.Provider>
+  const [transaction, setTransaction] = useState([])
+
+  const addTransaction = ({ title, amount }) => {
+    console.log(title, amount)
+    const id = Math.floor(Math.random() * 1000)
+    setTransaction([...transaction, {id, title, amount}])
+  }
+  return (<ExpenseContext.Provider value={{ addTransaction }}>{props.children}</ExpenseContext.Provider>)
 }
 
 export default ExpenseProvider
