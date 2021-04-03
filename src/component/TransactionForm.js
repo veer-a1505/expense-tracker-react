@@ -14,12 +14,23 @@ const TransactionForm = () => {
       ...data,
       [name]: value
     })
-
   }
+
+  const setRoleProperty = (obj) => {
+    const {amount} = obj
+
+    if(amount.startsWith('-')) {
+      obj.role = 'expense'
+    } else {
+      obj.role = 'income'
+    }
+  } 
+
 
   const handleSubmit = (event) => {
     event.preventDefault()
-    addTransaction(data)
+    setRoleProperty(data)
+    addTransaction(data)            
   }
 
   return (

@@ -3,14 +3,19 @@ import React, { createContext, useState } from 'react'
 export const ExpenseContext = createContext()
 
 const ExpenseProvider = (props) => {
+
+
   const [transaction, setTransaction] = useState([])
 
-  const addTransaction = ({ title, amount }) => {
-    console.log(title, amount)
+  const addTransaction = ({ title, amount , role}) => {
+
     const id = Math.floor(Math.random() * 1000)
-    setTransaction([...transaction, {id, title, amount}])
+    // localStorage.setItem('transactions', JSON.stringify(transaction) 
+    setTransaction([...transaction, {id, title, amount, role}])
   }
-  return (<ExpenseContext.Provider value={{ addTransaction }}>{props.children}</ExpenseContext.Provider>)
+
+
+  return (<ExpenseContext.Provider value={{ addTransaction , transaction }}>{props.children}</ExpenseContext.Provider>)
 }
 
 export default ExpenseProvider
