@@ -33,8 +33,13 @@ const ExpenseProvider = (props) => {
     console.log(totalExpense)
   }
 
+  const removeTransaction = (id) => {
+    const updatedTransactions = transaction.filter(trn => trn.id !== id)
+    setTransaction([...updatedTransactions])
+  }  
+
  
-  return (<ExpenseContext.Provider value={{ addTransaction , transaction, getBalance , getTotalIncome , getTotalExpense }}>{props.children}</ExpenseContext.Provider>)
+  return (<ExpenseContext.Provider value={{ addTransaction , transaction, getBalance , getTotalIncome , getTotalExpense , removeTransaction}}>{props.children}</ExpenseContext.Provider>)
 }
 
 export default ExpenseProvider
