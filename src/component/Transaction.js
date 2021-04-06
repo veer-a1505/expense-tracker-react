@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Transaction = ({transaction}) => {
-  const sign = transaction.role === 'income'  ? '+' : '-'
+  // const sign = transaction.role === 'income'  ? '+' : '-'
   return (
       <li className='transaction' >
         <span className={transaction.role === 'income' ? 'income' :'expense'}></span>

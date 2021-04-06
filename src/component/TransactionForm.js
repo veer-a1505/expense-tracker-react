@@ -21,7 +21,7 @@ const TransactionForm = () => {
 
     if(amount.startsWith('-')) {
       obj.role = 'expense'
-      obj.amount = obj.amount.split('-')[1]
+      // obj.amount = obj.amount.split('-')[1]
     } else {
       obj.role = 'income'
     }
