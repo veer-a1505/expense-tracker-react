@@ -30,10 +30,11 @@ body {
 
 .box {
   width: 50%;
-  height: 75px;
+  height: 50%;
   padding: 15px;
   text-align: center;
   border: 1px solid #607d8b;
+  border-radius: 2rem;
 }
 
 .transaction-container {
@@ -102,7 +103,7 @@ body {
   right: 45%;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
-  border-bottom: 20px solid green;
+  border-bottom: 20px solid #4caf50;
 }
 
 .expense {
@@ -110,11 +111,15 @@ body {
   right: 45%;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
-  border-top: 20px solid red;
+  border-top: 20px solid #f44336;
 }
 
 .balance {
   margin: 0.5rem auto;
   padding: 0.5rem;
   text-align: end;
+}
+.transaction-container h2 {
+  padding: 0.5rem;
+  text-align: left;
 }

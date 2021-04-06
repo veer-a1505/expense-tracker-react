@@ -9,6 +9,7 @@ const TransactionList = () => {
 
   return (
     <div className='transaction-container'>
+      <h2>Transaction Details</h2>
       {
         transaction.map((tran) => (
           <Transaction transaction={tran} key={tran.id} />

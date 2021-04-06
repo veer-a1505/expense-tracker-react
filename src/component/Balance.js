@@ -6,7 +6,7 @@ const Balance = () => {
   return (
     <div className='balance'>
       <h5>Available Balance </h5>
-      <h2>Rs.{getBalance()}.00</h2>
+      <h2>Rs.{getBalance()}</h2>
     </div>
   )
 }

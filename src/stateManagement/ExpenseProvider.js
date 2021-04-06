@@ -18,19 +18,20 @@ const ExpenseProvider = (props) => {
   const getBalance = () => {
     let amounts = transaction.map((value) => value.amount)
     let totalBalance = amounts.reduce((acc,cur) => acc + cur,0)
-    return totalBalance
+    return totalBalance.toFixed(2)
   }
 
   const getTotalIncome = () => {
     const amountWithRole = transaction.map(trans => trans.role === 'income' ? trans.amount : null)
     const totalIcnome = amountWithRole.reduce((acc,cur) => acc + cur, 0)
-    return totalIcnome
+    return totalIcnome.toFixed(2)
   }
 
   const getTotalExpense = () => {
     const amountWithRole = transaction.map((trn) => trn.role === 'expense' ? trn.amount : null)
     const totalExpense = amountWithRole.reduce((acc,cur) => acc + cur,0)
-    console.log(totalExpense)
+
+    return totalExpense.toFixed(2)
   }
 
   const removeTransaction = (id) => {

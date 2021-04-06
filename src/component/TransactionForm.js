@@ -36,8 +36,8 @@ const TransactionForm = () => {
 
   return (
     <form onSubmit={handleSubmit} className='form-container'>
-      <input type='text' placeholder='Add Title' name="title" onChange={updateField} ></input>
-      <input type='number' placeholder='Enter Amount' name="amount" onChange={updateField}></input>
+      <input type='text' placeholder='Add title' name="title" onChange={updateField} ></input>
+      <input type='number' placeholder='Enter an amount' name="amount" onChange={updateField}></input>
       <button type='submit'>Submit</button>
     </form>
   )
