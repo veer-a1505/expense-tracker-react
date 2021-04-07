@@ -21,7 +21,6 @@ const TransactionForm = () => {
 
     if(amount.startsWith('-')) {
       obj.role = 'expense'
-      // obj.amount = obj.amount.split('-')[1]
     } else {
       obj.role = 'income'
     }
@@ -35,11 +34,18 @@ const TransactionForm = () => {
   }
 
   return (
+    <div>
+    <div className='form-header'>
+      <h2>Add new transaction </h2>
+      <span>( positive - income, negative - expense )</span>
+    </div>
+    <hr></hr>
     <form onSubmit={handleSubmit} className='form-container'>
-      <input type='text' placeholder='Add title' name="title" onChange={updateField} ></input>
-      <input type='number' placeholder='Enter an amount' name="amount" onChange={updateField}></input>
-      <button type='submit'>Submit</button>
+      <input type='text' placeholder='Add title' name="title" onChange={updateField} autoFocus ></input>
+      <input type='number' placeholder='Enter an amount' name="amount" onChange={updateField} ></input>
+      <button type='submit'>submit</button>
     </form>
+    </div>
   )
 }
 

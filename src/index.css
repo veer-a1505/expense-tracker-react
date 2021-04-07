@@ -2,25 +2,25 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+
   font-family: 'Poppins', sans-serif;
 }
 
 body {
-  background-color: #ffffff;
+  background: #ffffff;
 }
 
 .container {
   margin: 100px auto;
   width: 500px;
   border-radius: 10px;
-  background-color: #f1f2f6;
+  background: #ffffff;
 }
 
 .header {
   width: 100%;
-  padding: 10px;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .amount-container {
@@ -40,6 +40,7 @@ body {
 .transaction-container {
   width: 100%;
   display: flex;
+  min-height: 4rem;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -49,19 +50,45 @@ body {
   width: 100%;
   display: flex;
   flex-direction: column;
-  margin: 30px auto;
+  margin: 1.2rem auto;
+  user-select: none;
+  padding: 1rem;
 }
 
 .form-container input {
   width: 60%;
-  padding: 10px;
-  margin: 5px auto;
+  padding: 0.5rem;
+  margin: 0.25rem auto;
+  border: none;
+  border-bottom: 0.1rem solid;
+}
+
+.form-container input[type='text'],
+input[type='number'] {
+  font-size: 1rem;
+  color: black;
+}
+
+input:focus {
+  outline: none;
 }
 
 .form-container button {
   width: 30%;
-  height: 25px;
-  margin: 10px auto;
+  height: 2rem;
+  font-size: 1rem;
+  color: black;
+  background-color: #4caf50;
+  margin: 0.25rem auto;
+  border: none;
+  border-radius: 0.5rem;
+}
+.form-container button:hover {
+  cursor: pointer;
+}
+
+.form-container button:focus {
+  outline: none;
 }
 
 .transaction {
@@ -71,9 +98,9 @@ body {
   list-style: none;
   width: 100%;
   margin: 5px auto;
+  border: 0.1rem solid;
+  border-radius: 0.2rem;
   padding: 5px;
-  border: 1px solid #2c3e50;
-  border-radius: 0.5rem;
 }
 
 .transaction-amount {
@@ -100,7 +127,7 @@ body {
 
 .income {
   position: absolute;
-  right: 45%;
+  right: 47%;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
   border-bottom: 20px solid #4caf50;
@@ -108,7 +135,7 @@ body {
 
 .expense {
   position: absolute;
-  right: 45%;
+  right: 47%;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
   border-top: 20px solid #f44336;
@@ -119,7 +146,26 @@ body {
   padding: 0.5rem;
   text-align: end;
 }
-.transaction-container h2 {
+
+.transaction-header {
+  margin: 0 auto;
   padding: 0.5rem;
-  text-align: left;
+}
+
+hr {
+  border: 0.25rem solid grey;
+  border-radius: 1rem;
+  user-select: none;
+}
+
+.form-header {
+  padding-top: 1rem;
+}
+
+.exp i {
+  color: #f44336;
+}
+
+.inc i {
+  color: #4caf50;
 }

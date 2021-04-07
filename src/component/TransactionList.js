@@ -5,16 +5,19 @@ import Transaction from './Transaction'
 const TransactionList = () => {
   const {transaction} = useContext(ExpenseContext)  
 
-
-
   return (
+    <div>
+      <div className='transaction-header'>
+        <h2>Transaction Details</h2>
+      </div>
+      <hr></hr>
     <div className='transaction-container'>
-      <h2>Transaction Details</h2>
       {
         transaction.map((tran) => (
           <Transaction transaction={tran} key={tran.id} />
         ))
       }
+    </div>
     </div>
   )
 }

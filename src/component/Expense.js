@@ -3,6 +3,7 @@ import {ExpenseContext} from './../stateManagement/ExpenseProvider'
 
 const Expense = () => {
   const {getTotalExpense} = useContext(ExpenseContext)
+  
   return (
     <div className='box exp'>
       <p>Expense</p>
