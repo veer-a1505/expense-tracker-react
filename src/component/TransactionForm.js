@@ -8,17 +8,8 @@ const TransactionForm = () => {
     amount: ""
   })
 
-  const updateField = (e) => {
-    const { name, value } = e.target
-    setData({
-      ...data,
-      [name]: value
-    })
-  }
-
   const setRoleProperty = (obj) => {
     const {amount} = obj
-
     if(amount.startsWith('-')) {
       obj.role = 'expense'
     } else {
@@ -26,11 +17,12 @@ const TransactionForm = () => {
     }
   } 
 
-
+  
   const handleSubmit = (event) => {
     event.preventDefault()
     setRoleProperty(data)
-    addTransaction(data)            
+    addTransaction(data)  
+    setData({title : "", amount : ""})
   }
 
   return (
@@ -39,10 +31,24 @@ const TransactionForm = () => {
       <h2>Add new transaction </h2>
       <span>( positive - income, negative - expense )</span>
     </div>
-    <hr></hr>
+    <hr />
     <form onSubmit={handleSubmit} className='form-container'>
-      <input type='text' placeholder='Add title' name="title" onChange={updateField} autoFocus ></input>
-      <input type='number' placeholder='Enter an amount' name="amount" onChange={updateField} ></input>
+
+      <input
+      type='text' 
+      placeholder='Add title'  
+      required
+      value={data.title} 
+      onChange={e => setData({...data, title : e.target.value})} 
+      autoFocus />
+
+      <input 
+      type='number' 
+      placeholder='Enter an amount' 
+      value={data.amount}  
+      required
+      onChange={e => setData({...data, amount : e.target.value})} />
+
       <button type='submit'>submit</button>
     </form>
     </div>

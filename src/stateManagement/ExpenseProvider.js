@@ -1,11 +1,17 @@
-import React, { createContext, useState } from 'react'
+import React, { createContext, useEffect, useState } from 'react'
 
 export const ExpenseContext = createContext()
 
 const ExpenseProvider = (props) => {
+  let localData = localStorage.getItem('transactions') 
+  
+  localData ? localData = JSON.parse(localData) : localData = []
 
+  const [transaction, setTransaction] = useState(localData)
 
-  const [transaction, setTransaction] = useState([])
+  useEffect(() => {
+    localStorage.setItem('transactions', JSON.stringify(transaction))
+  }, [transaction])
 
   const addTransaction = ({ title, amount , role}) => {
 
@@ -37,8 +43,6 @@ const ExpenseProvider = (props) => {
     setTransaction([...updatedTransactions])
   }  
 
-
- 
   return (<ExpenseContext.Provider value={{ addTransaction , transaction, getBalance , getTotalIncome , getTotalExpense , removeTransaction}}>{props.children}</ExpenseContext.Provider>)
 }
 
