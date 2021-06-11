@@ -188,10 +188,78 @@ hr {
 
 @media screen and (max-width: 600px) {
   .container {
-    margin: 10em auto;
+    margin: auto;
     padding: 1em;
-    width: 400px;
+    width: 100%;
+    height: 100vh;
     border-radius: 10px;
     background: #ffffff;
+  }
+
+  .header {
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .amount-container {
+    display: flex;
+    gap: 1em;
+  }
+
+  .box {
+    width: 50%;
+    height: 50%;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #607d8b;
+    border-radius: 0.5em;
+  }
+
+  .transaction-container {
+    width: 100%;
+    display: flex;
+    min-height: 2rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .form-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 1.2rem 0;
+    user-select: none;
+    padding: 1rem;
+  }
+
+  .form-container input {
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0.25rem auto;
+    border: none;
+    border-bottom: 0.15rem solid;
+  }
+
+  .form-container input[type='text'],
+  input[type='number'] {
+    font-size: 1rem;
+    color: black;
+  }
+
+  input:focus {
+    outline: none;
+  }
+
+  .form-container button {
+    width: 40%;
+    height: 2.5em;
+    font-size: 1rem;
+    color: black;
+    background-color: #4caf50;
+    margin: 0.25rem auto;
+    border: none;
+    border-radius: 0.5rem;
   }
 }
