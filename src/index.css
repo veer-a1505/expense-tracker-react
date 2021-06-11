@@ -16,7 +16,6 @@ body {
   width: 550px;
   border-radius: 10px;
   background: #ffffff;
-  /* box-shadow: 0.2rem 1rem 1rem 0.5rem #d0d0d0; */
 }
 
 .header {
@@ -185,4 +184,14 @@ hr {
 
 .transaction .child4 {
   flex-basis: 10%;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    margin: 10em auto;
+    padding: 1em;
+    width: 400px;
+    border-radius: 10px;
+    background: #ffffff;
+  }
 }
