@@ -99,9 +99,9 @@ input:focus {
   list-style: none;
   width: 100%;
   margin: 0.25rem auto;
-  border: 0.1rem solid;
   border-radius: 0.2rem;
   padding: 0.3rem;
+  border: 1px solid;
 }
 
 .dlt-btn {
@@ -120,6 +120,7 @@ input:focus {
 
 .income {
   position: absolute;
+  margin-top: 0.2em;
   border-left: 8px solid transparent;
   border-right: 8px solid transparent;
   border-bottom: 16px solid #4caf50;
@@ -127,6 +128,7 @@ input:focus {
 
 .expense {
   position: absolute;
+  margin-top: 0.2em;
   border-left: 8px solid transparent;
   border-right: 8px solid transparent;
   border-top: 16px solid #f44336;
@@ -171,19 +173,23 @@ hr {
 
 .transaction .child1 {
   flex-basis: 50%;
+  text-align: left;
   word-break: break-word;
 }
 
 .transaction .child2 {
+  text-align: center;
   flex-basis: 10%;
 }
 
 .transaction .child3 {
   flex-basis: 30%;
+  text-align: center;
 }
 
 .transaction .child4 {
   flex-basis: 10%;
+  text-align: center;
 }
 
 @media screen and (max-width: 600px) {
@@ -191,7 +197,6 @@ hr {
     margin: auto;
     padding: 1em;
     width: 100%;
-    height: 100vh;
     border-radius: 10px;
     background: #ffffff;
   }
@@ -225,6 +230,16 @@ hr {
     justify-content: center;
   }
 
+  .transaction {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 0.2rem auto;
+    border-radius: 0.4rem;
+    padding: 0.2rem;
+    border: 0.1em solid;
+  }
+
   .form-container {
     width: 100%;
     display: flex;
@@ -252,6 +267,24 @@ hr {
     outline: none;
   }
 
+  .amount-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .box {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    justify-content: space-around;
+  }
+
+  .box i {
+    margin-top: 0.2em;
+  }
+
   .form-container button {
     width: 40%;
     height: 2.5em;
@@ -261,5 +294,26 @@ hr {
     margin: 0.25rem auto;
     border: none;
     border-radius: 0.5rem;
+  }
+
+  .transaction .child1 {
+    flex-basis: 30%;
+    text-align: left;
+    word-break: break-word;
+  }
+
+  .transaction .child2 {
+    text-align: center;
+    flex-basis: 10%;
+  }
+
+  .transaction .child3 {
+    flex-basis: 30%;
+    text-align: center;
+  }
+
+  .transaction .child4 {
+    flex-basis: 10%;
+    text-align: center;
   }
 }

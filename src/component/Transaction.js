@@ -20,8 +20,10 @@ const Transaction = ({ transaction }) => {
 
       <div className='child3'>
         <span>
-          Rs.{sign}
-          {transaction.amount.toFixed(2)}
+          {new Intl.NumberFormat('en-IN', {
+            style: 'currency',
+            currency: 'INR',
+          }).format(transaction.amount)}
         </span>
       </div>
 
